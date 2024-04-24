@@ -11,7 +11,6 @@ if (!isNaN(km) && !isNaN(eta)) {
 
     // Se il numero dell'età è un numero intero
     if (Number.isInteger(eta)) {
-    } 
 
         // Creo variabili di numeri per i calcoli degli sconti
         const scontoMinore = Number(20);
@@ -33,22 +32,17 @@ if (!isNaN(km) && !isNaN(eta)) {
                 prezzoBiglietto = Number(prezzoBiglietto - (prezzoBiglietto / 100 * scontoNonno));
             }
 
-
-
-
-
-
-
-
-
+        // Stampo prezzo del biglietto in forma umana (con massimo due decimali, per indicare centesimi sul prezzo) con sconti solo se applicabili
+        console.log(`Il costo del biglietto è di: ${prezzoBiglietto.toFixed(2)} €`)
+    } 
 
     // Altrimenti esce questo avviso
     else {
         console.log("L'età deve essere un numero intero!");
-    }
+    }   
+} 
 
-}    
-    // Altrimenti esce questo avviso cattivissimo
+// Altrimenti esce questo avviso cattivissimo
 else {
     console.log("PUOI INSERIRE SOLO NUMERI!!");
 }
