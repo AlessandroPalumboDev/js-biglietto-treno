@@ -13,12 +13,23 @@ if (!isNaN(km) && !isNaN(eta)) {
     if (Number.isInteger(eta)) {
     } 
 
+        // Creo variabili di numeri per i calcoli degli sconti
+        const scontoMinore = Number(20);
+        const scontoNonno = Number(40);
+
+        // Creo variabili di numeri per il calcolo del costo del biglietto
+        const costoBiglietto = Number(0.21)
+
+        // Definisco una variabile per fare il primo calcolo del costo del biglietto intero basandosi sul prezzo al chilometro
+        let prezzoBiglietto = km * costoBiglietto;
 
 
 
 
 
-    
+
+
+
 
 
 
