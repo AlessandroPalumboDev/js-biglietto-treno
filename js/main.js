@@ -9,17 +9,24 @@ const eta = Number(prompt("Dichiarare età in anni"));
 // Se i dati inseriti dall'utente sono realmente numeri
 if (!isNaN(km) && !isNaN(eta)) {
 
+    // Se il numero dell'età è un numero intero
+    if (Number.isInteger(eta)) {
+    } 
 
 
 
 
 
- 
+
     
 
 
 
-    
+    // Altrimenti esce questo avviso
+    else {
+        console.log("L'età deve essere un numero intero!");
+    }
+
 }    
     // Altrimenti esce questo avviso cattivissimo
 else {
