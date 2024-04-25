@@ -15,13 +15,11 @@ definisco una variabile con un valore di prompt 1-9 - numerico numero dell'utent
 
             definisco una variabile con un valore randomico tra 1 e 9 (valore del computer) <!-- numeroComputer -->
 
-            definisco una variabile con la somma di numeroUtente + numeroComputer = totaleNumero <!-- numeroTotale -->
+            definisco una variabile con la somma di numeroUtente + numeroComputer = numeroTotale <!-- numeroTotale -->
 
             definisco una variabile che ci dice se il valore totaleNumero è pari o dispari <!-- risultatoPariDispari -->
 
-            -SE (risultatoPariDispari === 0 (pari) && SceltaUtente === 'pari'){ vince utente 
-            ELSE SE (risultatoPariDispari !== 0 (dispari) && SceltaUtente === 'dispari') vince utente 
-            ELSE vince computer
+            stabilisco chi ha vinto
 
         }
         ELSE stampa messaggio "solo 1-9"
