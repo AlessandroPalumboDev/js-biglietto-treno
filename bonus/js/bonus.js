@@ -6,55 +6,63 @@ const sceltaUtente = prompt('pari o dispari?').toLowerCase();
 // definisco una variabile con un valore di prompt 1-9
 const numeroUtente = Number(prompt('Scegli un numero da 1 a 9'));
 
-// utente può inserire solo numeri
-if (!isNaN(numeroUtente)) {
+// utente può scrivere solo pari o dispari
+if (sceltaUtente === "pari" || sceltaUtente === "dispari") {
 
-    // utente può inserire solo numeri interi
-    if (Number.isInteger(numeroUtente)){
+    // utente può inserire solo numeri
+    if (!isNaN(numeroUtente)) {
 
-        // utente può inserire solo numeri da 1 a 9
-        if ((numeroUtente >= 1) && (numeroUtente <= 9)){
+        // utente può inserire solo numeri interi
+        if (Number.isInteger(numeroUtente)) {
 
-            // definisco una variabile con un valore randomico tra 1 e 9
-            const numeroComputer = Math.floor(Math.random()*9);
+            // utente può inserire solo numeri da 1 a 9
+            if ((numeroUtente >= 1) && (numeroUtente <= 9)) {
 
-            // definisco una variabile con la somma di numeroUtente + numeroComputer = numeroTotale
-            const numeroTotale = (numeroUtente + numeroComputer);
+                // definisco una variabile con un valore randomico tra 1 e 9
+                const numeroComputer = Math.floor(Math.random() * 9);
 
-            // definisco una variabile che ci dice se il valore numeroTotale è pari o dispari
-            let risultatoPariDispari;
-            if (numeroTotale % 2 === 0){
-                risultatoPariDispari = 'pari';
+                // definisco una variabile con la somma di numeroUtente + numeroComputer = numeroTotale
+                const numeroTotale = (numeroUtente + numeroComputer);
+
+                // definisco una variabile che ci dice se il valore numeroTotale è pari o dispari
+                let risultatoPariDispari;
+                if (numeroTotale % 2 === 0) {
+                    risultatoPariDispari = 'pari';
+                }
+                else {
+                    risultatoPariDispari = 'dispari';
+                }
+
+                // stabilisco chi ha vinto
+                if (risultatoPariDispari === sceltaUtente) {
+                    document.getElementById('messaggio').innerHTML = ("Hai vinto! :-)")
+                    document.getElementById('spiegazione').innerHTML = (`Il tuo numero era: ${numeroUtente} il mio era: ${numeroComputer} e la somma è: ${numeroTotale} quindi il risultato è: ${risultatoPariDispari} e la tua scelta è stata ${sceltaUtente}`)
+                }
+                else {
+                    document.getElementById('messaggio').innerHTML = ("Hai perso! :'(")
+                    document.getElementById('spiegazione').innerHTML = (`Il tuo numero era: ${numeroUtente} il mio era: ${numeroComputer} e la somma è: ${numeroTotale} quindi il risultato è: ${risultatoPariDispari} invece la tua scelta è stata ${sceltaUtente}`)
+                }
+
             }
+            // Altrimenti esce questo avviso
             else {
-                risultatoPariDispari = 'dispari';
+                document.getElementById('messaggio').innerHTML = ("Puoi inserire solo un numero da 1 a 9 compresi");
             }
 
-            // stabilisco chi ha vinto
-            if (risultatoPariDispari === sceltaUtente){
-                document.getElementById('messaggio').innerHTML = ("Hai vinto! :-)")
-                document.getElementById('spiegazione').innerHTML = (`Il tuo numero era: ${numeroUtente} il mio era: ${numeroComputer} e la somma è: ${numeroTotale} quindi il risultato è: ${risultatoPariDispari} e la tua scelta è stata ${sceltaUtente}`)
-            }
-            else {
-                document.getElementById('messaggio').innerHTML = ("Hai perso! :'(")
-                document.getElementById('spiegazione').innerHTML = (`Il tuo numero era: ${numeroUtente} il mio era: ${numeroComputer} e la somma è: ${numeroTotale} quindi il risultato è: ${risultatoPariDispari} invece la tua scelta è stata ${sceltaUtente}`)
-            }
-        
         }
         // Altrimenti esce questo avviso
         else {
-            document.getElementById('messaggio').innerHTML = ("Puoi inserire solo un numero da 1 a 9 compresi");
+            document.getElementById('messaggio').innerHTML = ("Il numero inserito deve essere un numero intero!");
         }
 
     }
-    // Altrimenti esce questo avviso
+    // Altrimenti esce questo avviso cattivissimo
     else {
-        document.getElementById('messaggio').innerHTML = ("Il numero inserito deve essere un numero intero!");
+        document.getElementById('messaggio').innerHTML = ("PUOI INSERIRE SOLO NUMERI!!");
     }
 
 }
-// Altrimenti esce questo avviso cattivissimo
+// altrimenti esce questo avviso
 else {
-    document.getElementById('messaggio').innerHTML = ("PUOI INSERIRE SOLO NUMERI!!");
+    document.getElementById('messaggio').innerHTML = ('Puoi digitare solo "pari" o "dispari"')
 }
-
