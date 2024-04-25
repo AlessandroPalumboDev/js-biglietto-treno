@@ -30,7 +30,15 @@ if (!isNaN(numeroUtente)) {
                 risultatoPariDispari = 'dispari';
             }
 
-
+            // stabilisco chi ha vinto
+            if (risultatoPariDispari === sceltaUtente){
+                document.getElementById('messaggio').innerHTML = ("Hai vinto! :-)")
+                document.getElementById('spiegazione').innerHTML = (`Il tuo numero era: ${numeroUtente} il mio era: ${numeroComputer} e la somma è: ${numeroTotale} quindi il risultato è: ${risultatoPariDispari} e la tua scelta è stata ${sceltaUtente}`)
+            }
+            else {
+                document.getElementById('messaggio').innerHTML = ("Hai perso! :'(")
+                document.getElementById('spiegazione').innerHTML = (`Il tuo numero era: ${numeroUtente} il mio era: ${numeroComputer} e la somma è: ${numeroTotale} quindi il risultato è: ${risultatoPariDispari} invece la tua scelta è stata ${sceltaUtente}`)
+            }
         
         }
         // Altrimenti esce questo avviso
