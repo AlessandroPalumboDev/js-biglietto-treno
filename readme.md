@@ -35,5 +35,3 @@ Se i dati inseriti dall'utente sono realmente numeri:
     Altrimenti esce un avviso
 
 Altrimenti esce un avviso cattivissimo
-
-
