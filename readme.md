@@ -8,6 +8,12 @@ va applicato uno sconto del 40% per gli over 65.
 L'output del prezzo finale va messo fuori in forma umana (con massimo due decimali, per indicare centesimi sul prezzo).
 Questo richiederà un minimo di ricerca. -->
 
+Creo un prompt che chieda i chilometri da percorrere creando una variabile trasformandola in numero
+
+Creo un prompt che chieda l'età del passeggero creando una variabile trasformandola in numero
+
+Creo variabile dell' elemento html su cui stampare
+
 Se i dati inseriti dall'utente sono realmente numeri:
 
     Se il numero dell'età è un numero intero:
@@ -31,4 +37,3 @@ Se i dati inseriti dall'utente sono realmente numeri:
 Altrimenti esce un avviso cattivissimo
 
 
-<!-- Seconda pubblicazione conseguente all' eliminazione dell repo precedente -->

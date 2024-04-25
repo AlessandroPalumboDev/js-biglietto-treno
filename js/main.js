@@ -6,6 +6,9 @@ const km = Number(prompt("Dichiarare numero di Km da percorrere"));
 // Creo un prompt che chieda l'età del passeggero creando una variabile trasformandola in numero
 const eta = Number(prompt("Dichiarare età in anni"));
 
+// Creo variabile dell' elemento html
+let currentText = document.getElementById('risultato').innerHTML;
+
 // Se i dati inseriti dall'utente sono realmente numeri
 if (!isNaN(km) && !isNaN(eta)) {
 
@@ -33,16 +36,19 @@ if (!isNaN(km) && !isNaN(eta)) {
             }
 
         // Stampo prezzo del biglietto in forma umana (con massimo due decimali, per indicare centesimi sul prezzo) con sconti solo se applicabili
-        console.log(`Il costo del biglietto è di: ${prezzoBiglietto.toFixed(2)} €`)
+        console.log(`Il costo del biglietto è di: ${prezzoBiglietto.toFixed(2)} €`);
+        document.getElementById('risultato').innerHTML = (`Il costo del biglietto è di: ${prezzoBiglietto.toFixed(2)} €`);
     } 
 
     // Altrimenti esce questo avviso
     else {
         console.log("L'età deve essere un numero intero!");
+        document.getElementById('risultato').innerHTML = ("L'età deve essere un numero intero!");
     }   
 } 
 
 // Altrimenti esce questo avviso cattivissimo
 else {
     console.log("PUOI INSERIRE SOLO NUMERI!!");
+    document.getElementById('risultato').innerHTML = ("PUOI INSERIRE SOLO NUMERI!!");
 }
