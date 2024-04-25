@@ -4,12 +4,32 @@ definisco una variabile con il valore di un prompt che chiede pari o dispari par
 
 definisco una variabile con un valore di prompt 1-9 - numerico numero dell'utente (1/9) <!-- numeroUtente -->
 
-definisco una variabile con un valore randomico tra 1 e 9 (valore del computer) <!-- numeroComputer -->
+<!-- utente può inserire solo numeri -->
+-SE (!isNaN(numeroUtente)) {
 
-definisco una variabile con la somma di numeroUtente + numeroComputer = totaleNumero <!-- totaleNumero -->
+    <!-- utente può inserire solo numeri interi -->
+    -SE (Number.isInteger(numeroUtente)){
 
-definisco una variabile che ci dice se il valore totaleNumero è pari o dispari <!-- risultatoPariDispari -->
+        <!-- utente può inserire solo numeri da 1 a 9 -->
+        -SE (numeroUtente > 1 && numeroUtente < 9){
 
--SE (risultatoPariDispari === 0 (pari) && SceltaUtente === 'pari'){ vince utente 
-ELSE SE (risultatoPariDispari !== 0 (dispari) && SceltaUtente === 'dispari') vince utente 
-ELSE vince computer
+            definisco una variabile con un valore randomico tra 1 e 9 (valore del computer) <!-- numeroComputer -->
+
+            definisco una variabile con la somma di numeroUtente + numeroComputer = totaleNumero <!-- totaleNumero -->
+
+            definisco una variabile che ci dice se il valore totaleNumero è pari o dispari <!-- risultatoPariDispari -->
+
+            -SE (risultatoPariDispari === 0 (pari) && SceltaUtente === 'pari'){ vince utente 
+            ELSE SE (risultatoPariDispari !== 0 (dispari) && SceltaUtente === 'dispari') vince utente 
+            ELSE vince computer
+
+        }
+        ELSE stampa messaggio "solo 1-9"
+
+    }
+    ELSE stampa messaggio "solo numero intero"
+
+}
+ELSE stampa messaggio "solo numeri"
+
+
