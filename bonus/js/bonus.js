@@ -15,9 +15,11 @@ if (!isNaN(numeroUtente)) {
         // utente può inserire solo numeri da 1 a 9
         if ((numeroUtente >= 1) && (numeroUtente <= 9)){
 
+        // definisco una variabile con un valore randomico tra 1 e 9
+        const numeroComputer = Math.floor(Math.random()*9);
 
-
-
+        // definisco una variabile con la somma di numeroUtente + numeroComputer = numeroTotale
+        const numeroTotale = (numeroUtente + numeroComputer);
 
 
         }

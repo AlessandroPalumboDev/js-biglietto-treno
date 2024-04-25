@@ -15,7 +15,7 @@ definisco una variabile con un valore di prompt 1-9 - numerico numero dell'utent
 
             definisco una variabile con un valore randomico tra 1 e 9 (valore del computer) <!-- numeroComputer -->
 
-            definisco una variabile con la somma di numeroUtente + numeroComputer = totaleNumero <!-- totaleNumero -->
+            definisco una variabile con la somma di numeroUtente + numeroComputer = totaleNumero <!-- numeroTotale -->
 
             definisco una variabile che ci dice se il valore totaleNumero è pari o dispari <!-- risultatoPariDispari -->
 
