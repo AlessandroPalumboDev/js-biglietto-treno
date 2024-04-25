@@ -1,6 +1,6 @@
 <!-- chiedere all'utente se vuole pari o dispari e un numero intero compreso tra 1 e 9. Generare un numero casuale compreso tra 1 e 9, che sarà la giocata del computer. Stabilire e comunicare chi ha vinto secondo le regole di pari o dispari. -->
 
-definisco una variabile con il valore di un prompt che chiede pari o dispari pari/dispari <!-- SceltaUtente -->
+definisco una variabile con il valore di un prompt che chiede pari o dispari pari/dispari <!-- sceltaUtente -->
 
 definisco una variabile con un valore di prompt 1-9 - numerico numero dell'utente (1/9) <!-- numeroUtente -->
 
