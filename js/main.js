@@ -25,27 +25,31 @@ if (!isNaN(km) && !isNaN(eta)) {
         // Definisco una variabile per fare il primo calcolo del costo del biglietto intero basandosi sul prezzo al chilometro
         let prezzoBiglietto = km * costoBiglietto;
 
-            // Se il valore di età è inferiore a 18 modifico la variabile del prezzo del biglietto e stampo il prezzo scontato del 20%
-            if (eta < 18){
-                prezzoBiglietto = Number(prezzoBiglietto - (prezzoBiglietto / 100 * scontoMinore));
-            }
+        // Se il valore di età è inferiore a 18 modifico la variabile del prezzo del biglietto e applico lo sconto del 20%
+        if (eta < 18) {
+            prezzoBiglietto = Number(prezzoBiglietto - (prezzoBiglietto / 100 * scontoMinore));
+            document.getElementById('risultato').innerHTML = (`Utente minorenne: Il costo del biglietto è di: ${prezzoBiglietto.toFixed(2)} €`);
+        }
 
-            // Se il valore di età è superiore a 65 modifico la variabile del prezzo del biglietto e stampo il prezzo scontato dell 40%
-            else if (eta > 65){
-                prezzoBiglietto = Number(prezzoBiglietto - (prezzoBiglietto / 100 * scontoNonno));
-            }
+        // Se il valore di età è superiore a 65 modifico la variabile del prezzo del biglietto e applico lo sconto dell 40%
+        else if (eta > 65) {
+            prezzoBiglietto = Number(prezzoBiglietto - (prezzoBiglietto / 100 * scontoNonno));
+            document.getElementById('risultato').innerHTML = (`Utente oltre i 65 anni: Il costo del biglietto è di: ${prezzoBiglietto.toFixed(2)} €`);
+        }
 
         // Stampo prezzo del biglietto in forma umana (con massimo due decimali, per indicare centesimi sul prezzo) con sconti solo se applicabili
-        console.log(`Il costo del biglietto è di: ${prezzoBiglietto.toFixed(2)} €`);
-        document.getElementById('risultato').innerHTML = (`Il costo del biglietto è di: ${prezzoBiglietto.toFixed(2)} €`);
-    } 
+        else {
+            console.log(`Il costo del biglietto è di: ${prezzoBiglietto.toFixed(2)} €`);
+            document.getElementById('risultato').innerHTML = (`Il costo del biglietto è di: ${prezzoBiglietto.toFixed(2)} €`);
+        }
+    }
 
     // Altrimenti esce questo avviso
     else {
         console.log("L'età deve essere un numero intero!");
         document.getElementById('risultato').innerHTML = ("L'età deve essere un numero intero!");
-    }   
-} 
+    }
+}
 
 // Altrimenti esce questo avviso cattivissimo
 else {
